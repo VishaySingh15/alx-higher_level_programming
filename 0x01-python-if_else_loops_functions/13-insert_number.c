@@ -48,6 +48,8 @@ listint_t *insert_node(listint_t **head, int number)
 		current_ptr = current_ptr->next;
 	}
 
-	free(temp_node);
-	return (NULL);
+	temp_node->n = number;
+	temp_node->next = NULL;
+	current_ptr->next = temp_node;
+	return (temp_node);
 }
