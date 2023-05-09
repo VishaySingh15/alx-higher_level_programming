@@ -16,6 +16,11 @@ listint_t *insert_node(listint_t **head, int number)
 		free(temp_node);
 		return (NULL);
 	}
+	if (!*head)
+	{
+		free(temp_node);
+		return (NULL);
+	}
 
 	if (number < (*head)->n)
 	{
