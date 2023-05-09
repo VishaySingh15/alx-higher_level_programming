@@ -50,6 +50,6 @@ listint_t *insert_node(listint_t **head, int number)
 
 	temp_node->n = number;
 	temp_node->next = NULL;
-	current_ptr->next = temp_node;
+	prev_ptr->next = temp_node;
 	return (temp_node);
 }
