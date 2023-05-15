@@ -6,7 +6,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int length = 0, count = 0, beg, end;
+	int length = 0, count = 0, result;
 	listint_t *cur_ptr;
 
 	if (!*head)
@@ -21,9 +21,8 @@ int is_palindrome(listint_t **head)
 	}
 	while (count < (length + 1) / 2)
 	{
-		beg = get_int(count, *head);
-		end = get_int(length - 1 - count, *head);
-		if (beg != end)
+		result = get_int(count, length - 1 - count, *head);
+		if (!result)
 		{
 			return (0);
 		}
@@ -38,14 +37,21 @@ int is_palindrome(listint_t **head)
  * @ptr: pointer to first list item
  * Return: int at index
  */
-int get_int(int idx, listint_t *ptr)
+int get_int(int idx1, int idx2, listint_t *ptr)
 {
-	int count = 0;
+	int count = 0, beg, end;
 
-	while (count != idx)
+	while (count != idx1)
 	{
 		ptr = ptr->next;
 		count++;
 	}
-	return (ptr->n);
+	beg = ptr->n;
+	while (count != idx2)
+        {
+                ptr = ptr->next;
+                count++;
+        }
+	end = ptr->n;
+	return (beg == end);
 }
