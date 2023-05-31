@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+""" This module creates a simple Square class
+    and initialises it and checks for errors
+"""
+
+
 class Square:
     """ Class defines a square by size
     """

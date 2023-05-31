@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+""" This module creates a simple Square class
+    and initialises it and checks for errors
+    Contains function for area of square
+    and setter. Function to print square
+"""
+
+
 class Square:
     """ Defines square
     """

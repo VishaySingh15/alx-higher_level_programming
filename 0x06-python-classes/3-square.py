@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+""" This module creates a simple Square class
+    and initialises it and checks for errors
+    Contains function for area of square
+"""
+
+
 class Square:
     """ Class defines a square
     """
