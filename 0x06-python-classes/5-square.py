@@ -42,6 +42,7 @@ class Square:
                 self.__size = value
         else:
             raise TypeError("size must be an integer")
+
     def my_print(self):
         """ Prints square
         """
