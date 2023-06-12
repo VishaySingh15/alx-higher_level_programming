@@ -1,0 +1,31 @@
+The ``7-base_geometry`` module
+===============================
+
+Using ``BaseGeometry``
+----------------------
+
+This class is used to valid an integer.
+First import ``BaseGeometry`` from ``7-base_geometry``:
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Validating a positive number:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_string", 5)
+	
+Validating a negative number:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_string", -5)
+	Traceback (most recent call last):
+		...
+	ValueError: my_string must be greater than 0
+
+Validating a string instead of an int:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_string", "abc")
+	Traceback (most recent call last):
+		...
+	TypeError: my_string must be an integer

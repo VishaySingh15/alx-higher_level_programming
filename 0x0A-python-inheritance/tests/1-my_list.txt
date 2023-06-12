@@ -1,0 +1,19 @@
+The ``1-my_list`` module
+=========================
+
+Using ``MyList``
+-----------------
+
+This class inherits from list and prints the list in ascending order.
+First import ``MyList`` from ``1-my_list``:
+
+	>>> MyList = __import__('1-my_list').MyList
+
+Print a list:
+
+	>>> my_list = MyList()
+	>>> my_list.append(2)
+	>>> my_list.append(-3)
+	>>> my_list.append(10)
+	>>> my_list.print_sorted()
+	[-3, 2, 10]
