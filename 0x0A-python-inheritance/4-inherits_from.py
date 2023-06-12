@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+
+This module defines the inherits_from method
+
+"""
+
+
 def inherits_from(obj, a_class):
     """
     This function determines if an object is an
